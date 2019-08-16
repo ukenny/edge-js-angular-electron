@@ -8,10 +8,11 @@
 /bazel-out
 
 c-sharp-projects/QuickStart/.vs/*
-c-sharp-projects/QuickStart/QuickStart.Core/bin
-c-sharp-projects/QuickStart/QuickStart.Core/obj
-c-sharp-projects/QuickStart/QuickStart.Framework/bin
-c-sharp-projects/QuickStart/QuickStart.Framework/obj
+c-sharp-projects/QuickStart/QuickStart.Core/bin/*
+c-sharp-projects/QuickStart/QuickStart.Core/obj/*
+c-sharp-projects/QuickStart/QuickStart.Framework/bin/*
+c-sharp-projects/QuickStart/QuickStart.Framework/obj/*
+c-sharp-projects/QuickStart/packages/*
 
 # dependencies
 /node_modules
