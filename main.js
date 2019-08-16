@@ -1,6 +1,6 @@
-const {app, BrowserWindow, ipcMain} = require('electron')
-const url = require("url");
-const path = require("path");
+const { app, BrowserWindow, ipcMain } = require('electron')
+const url = require('url')
+const path = require('path')
 
 let mainWindow
 
@@ -16,10 +16,10 @@ function createWindow () {
   mainWindow.loadURL(
     url.format({
       pathname: path.join(__dirname, `/dist/index.html`),
-      protocol: "file:",
+      protocol: 'file:',
       slashes: true
     })
-  );
+  )
   // Open the DevTools.
   mainWindow.webContents.openDevTools()
 
@@ -38,9 +38,9 @@ app.on('activate', function () {
   if (mainWindow === null) createWindow()
 })
 
-function openModal(){
-  const { BrowserWindow } = require('electron');
-  let modal = new BrowserWindow({ parent: mainWindow, modal: true, show: false })
+function openModal () {
+  const { BrowserWindow } = require('electron')
+  const modal = new BrowserWindow({ parent: mainWindow, modal: true, show: false })
   modal.loadURL('https://www.sitepoint.com')
   modal.once('ready-to-show', () => {
     modal.show()
@@ -50,4 +50,3 @@ function openModal(){
 ipcMain.on('openModal', (event, arg) => {
   openModal()
 })
-
